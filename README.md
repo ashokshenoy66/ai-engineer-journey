@@ -1,4 +1,4 @@
-# AI Engineer Journey
+# AI Engineer's Journey
 
 This repository contains my learning journey to become an AI Engineer.
 
