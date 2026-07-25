@@ -1,3 +1,5 @@
+''' Functions to find out if a number is even , prime and to take factorial'''
+
 def is_even(number:int)->bool:
     return number % 2 == 0
     
@@ -20,7 +22,7 @@ def is_prime(number:int)->bool:
         
     
 
-def factorial(number)->int:
+def factorial(number:int)->int:
     fac = 1
 
     for i in range(1, number + 1):
