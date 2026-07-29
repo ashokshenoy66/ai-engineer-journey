@@ -29,7 +29,8 @@ def display_employee_menu():
     operations = [
     "1 Add Employee",
     "2 List Employee",
-    "3 Return"
+    "3 Search by ID",
+    "4 Return"
     ]
 
     for item in operations:
@@ -102,12 +103,18 @@ def main():
             
         elif choice == "6":
             display_employee_menu()
+            
             operation = input("Select Operation: ")
+            
             if operation == "1":
                     result = employee_db.add_employee()
 
             elif operation == "2":
                 result = employee_db.list_employees()
+                
+            elif operation == "3":
+                searchid = int(input("enter ID: "))
+                result = employee_db.search_employee(searchid)
 
             else :
                 continue

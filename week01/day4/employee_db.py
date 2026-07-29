@@ -34,7 +34,7 @@ def add_employee():
 
         "salary": float(input("Salary : "))
     }
-
+         
     employees.append(emp)
 
     save_employees(employees)
@@ -57,4 +57,31 @@ def list_employees():
             emp["department"],
             emp["salary"]
         )
+
+
+
+
+
+def search_employee(employee_id: int):
+    
+    employees = load_employees()
+
+    if not employees:
+        print("No employees found.")
+        return
+
+    for emp in employees:
+        if emp["id"] == employee_id:
+            print(
+            emp["id"],
+            emp["name"],
+            emp["department"],
+            emp["salary"]
+            )
+            return
         
+    print("Employee not found")
+           
+    
+
+    
