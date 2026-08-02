@@ -14,3 +14,9 @@
 - Created AI Office Toolkit
 - Added menu system
 - Integrated calculator, employee, and utility modules
+
+## Day 4
+- Added JSON-based employee database
+- Implemented employee persistence
+- Added employee search
+- Learned JSON read/write

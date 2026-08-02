@@ -22,11 +22,5 @@
         "name": "Adi",
         "department": "dev",
         "salary": 66000.0
-    },
-    {
-        "id": 127,
-        "name": "aabbcc",
-        "department": "aass",
-        "salary": 112233.0
     }
 ]
