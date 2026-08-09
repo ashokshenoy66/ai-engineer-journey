@@ -30,7 +30,9 @@ def display_employee_menu():
     "1 Add Employee",
     "2 List Employee",
     "3 Search by ID",
-    "4 Return"
+    "4 Update Employee",
+    "5 Delete Employee",
+    "6 Return"
     ]
 
     for item in operations:
@@ -115,7 +117,14 @@ def main():
             elif operation == "3":
                 searchid = int(input("enter ID: "))
                 result = employee_db.search_employee(searchid)
-
+            
+            elif operation == "4":
+                updateid = int(input("enter ID: "))
+                result = employee_db.update_employee(updateid)
+                
+            elif operation == "5":
+                deleteid = int(input("enter ID: "))
+                result = employee_db.delete_employee(deleteid)
             else :
                 continue
 

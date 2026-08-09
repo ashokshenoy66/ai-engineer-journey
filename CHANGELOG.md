@@ -20,3 +20,8 @@
 - Implemented employee persistence
 - Added employee search
 - Learned JSON read/write
+
+## Day 5
+ - Added Update and Delete employee 
+ - built reusable input function get_float and get_int
+ - update only what is changed feature implemented

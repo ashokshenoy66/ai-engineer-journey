@@ -34,3 +34,21 @@ def factorial(number:int)->int:
         fac = fac * i
     return fac
 
+def get_float(prompt:str) -> float:
+    ''' check if input is a number / float'''
+    while True:
+        try:
+            return float(input(prompt))
+        except ValueError:
+            print("Invalid number Please try  again ")
+            
+            
+def get_int(prompt: str) -> int:
+    """Ask the user for a valid integer number."""
+
+    while True:
+        try:
+            return int(input(prompt))
+        except ValueError:
+            print("Invalid number. Please try again. ")
+       
