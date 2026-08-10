@@ -101,22 +101,26 @@ def update_employee(employee_id: int) -> None:
             # Ask for new values here
             
             print("Current Name: ", emp["name"])
-            new_name = input("(press Enter to keep current):")
+            new_name = input("New Name (press Enter to keep current):")
+            
             if new_name:
                     emp["name"] = new_name
                     
                     
             print("Current Department: ", emp["department"])
-            new_dept = input("(press Enter to keep current):")
+            new_dept = input("New Dept. (press Enter to keep current):")
             if new_dept:
                     emp["department"] = new_dept
                     
             print("Current Salary: ", emp["salary"])
-            new_sal = input("(press Enter to keep current):")
+            new_sal = input("New Salary (press Enter to keep current):")
             if new_sal:
-                    emp["salary"] = utils.get_float(new_sal)
-
-           
+                try:
+                    emp["salary"] = float(new_sal)
+                except ValueError:
+                    print("Invalid salary.")
+                    return
+                    
 
             # Save employees here
             save_employees(employees)
