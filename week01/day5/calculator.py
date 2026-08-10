@@ -22,10 +22,10 @@ def power(a:float, b:float)->float:
     return a**b
 
 def modulus(a:float, b:float)-> float:
-    ''' returns reminder of a/b i.e modulus '''
+    ''' returns remainder of a/b i.e modulus '''
     return a % b
 
 def square_root(num:float)->float:
-    ''' returns sqare root of the input number '''
+    ''' returns square root of the input number '''
     return math.sqrt(num)
 

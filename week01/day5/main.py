@@ -104,30 +104,32 @@ def main():
             print("BMI Selected")
             
         elif choice == "6":
-            display_employee_menu()
-            
-            operation = input("Select Operation: ")
-            
-            if operation == "1":
-                 employee_db.add_employee()
-
-            elif operation == "2":
-                 employee_db.list_employees()
+            while True:
+                display_employee_menu()
+                                
+                operation = input("Select Operation: ")
                 
-            elif operation == "3":
-                searchid = int(input("enter ID: "))
-                result = employee_db.search_employee(searchid)
-            
-            elif operation == "4":
-                updateid = int(input("enter ID: "))
-                result = employee_db.update_employee(updateid)
-                
-            elif operation == "5":
-                deleteid = int(input("enter ID: "))
-                result = employee_db.delete_employee(deleteid)
-            else :
-                continue
+                if operation == "1":
+                    employee_db.add_employee()
 
+                elif operation == "2":
+                    employee_db.list_employees()
+                    
+                elif operation == "3":
+                    searchid = utils.get_int("enter ID : ")
+                    employee_db.search_employee(searchid)
+                
+                elif operation == "4":
+                    updateid = utils.get_int("ID : ")
+                    employee_db.update_employee(updateid)
+                    
+                elif operation == "5":
+                    deleteid = utils.get_int("ID : ")
+                    employee_db.delete_employee(deleteid)
+                elif operation == "6":
+                    break
+                
+                
 
         elif choice == "7":
             print("Goodbye!")
