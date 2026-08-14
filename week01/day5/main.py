@@ -48,8 +48,8 @@ def main():
 
         if choice == "1":
             while True:
-                a = float(input("First Number: "))
-                b = float(input("Second Number: "))
+                a = utils.get_float("First Number: ")
+                b = utils.get_float("Second Number: ")
 
                 display_calculator_menu()
 
@@ -78,7 +78,7 @@ def main():
                     break
 
         elif choice == "2":
-            salary = float(input("Enter Salary: "))
+            salary = utils.get_float("Enter Salary: ")
             bonus = employee.calculate_bonus(salary)
             print("Bonus =", bonus)
 
@@ -93,7 +93,7 @@ def main():
                 print("Odd Number")
 
         elif choice == "4":
-            number = int(input("Enter Number: "))
+            number = utils.get_int("Enter Number: ")
 
             if utils.is_prime(number):
                 print("Prime")
